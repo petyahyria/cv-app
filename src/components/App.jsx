@@ -6,6 +6,27 @@ import Experience from './Experience'
 
 function App() {
   const [activeIndex, setActiveIndex]=useState(0);
+  const [experience, setExperience] = useState(
+    {
+        "title": "",
+        "company": "",
+        "start": "",
+        "end": ""
+    });
+  const [education, setEducation] = useState(
+    {
+        "schoolName": "",
+        "course": "",
+        "start": "",
+        "end": ""
+    });
+  const [generalInfo, setGeneralInfo] = useState(
+    {
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": ""
+    });
 
   function clickNext() {
     if(activeIndex < 2){
@@ -19,9 +40,9 @@ function App() {
   }
   return (
     <div className="app">
-      <GeneralInfo next={clickNext} prev={clickPrev} isActive={activeIndex===0} />
-      <Education next={clickNext} prev={clickPrev} isActive={activeIndex===1} />
-      <Experience next={clickNext} prev={clickPrev} isActive={activeIndex===2} />
+      <GeneralInfo next={clickNext} prev={clickPrev} isActive={activeIndex===0} generalInfo={generalInfo} change={(x)=>setGeneralInfo(x)} />
+      <Education next={clickNext} prev={clickPrev} isActive={activeIndex===1} education={education} change={(x)=>setEducation(x)}/>
+      <Experience next={clickNext} prev={clickPrev} isActive={activeIndex===2} experience={experience} change={(x)=>setExperience(x)}/>
     </div>
   )
 }

@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -7,10 +13,24 @@
 
 section{
   padding: 2rem;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.questions{
+  border-radius: 20px;
+  background-color: #f1f5f9;
+  padding: 1rem;
+  margin: 10px 0;
+  width: 100%;
+  box-shadow: 0 0 10px 1px #020617;
 }
 
 input, label{
   display: block;
+  color: #020617;
 }
 
 label{
@@ -18,14 +38,36 @@ label{
 }
 
 input{
-  width: 300px;
+  width: 100%;
   padding: 5px;
   font-size: 1.3rem;
+  margin-bottom: 10px;
+  background-color: #f1f5f9;
+  border: 1px solid #020617;
+}
+
+.btn{
+  background-color: #1e40af;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  box-shadow: 0 0 10px 1px #020617;
+}
+
+.add-btn{
+  margin: 10px 0;
+}
+
+.btn-div{
+  display: flex;
+  gap: 20px;
 }
 
 button{
+  display: block;
   padding: 10px 20px;
-  margin-top: 10px;
   font-size: 1.3rem;
 }
 
