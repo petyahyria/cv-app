@@ -16,7 +16,6 @@ function Education({next, prev, isActive, education, change}) {
                     <label htmlFor="graduate">Graduate</label>
                     <input value={education.end} onChange={(e)=>change(()=>{return {...education, end:e.target.value} })}  type="date" name="graduate" id="graduate" />
                 </div>
-                <button className="btn add-btn">+</button>
                 <div className="btn-div">
                     <button className="btn" onClick={prev}>Prev</button>
                     <button className="btn" onClick={next}>Next</button>

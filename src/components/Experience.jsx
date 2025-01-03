@@ -1,6 +1,6 @@
 
 
-function Experience({next, prev, isActive, submit, experience, change}) {
+function Experience({prev, isActive, submit, experience, change}) {
     return (
       <>
         {isActive && (
@@ -19,7 +19,6 @@ function Experience({next, prev, isActive, submit, experience, change}) {
             <button className="btn add-btn">+</button>
             <div className="btn-div">
                       <button className="btn" onClick={prev}>Prev</button>
-                      <button className="btn" onClick={next}>Next</button>
                       <button className="btn" onClick={submit}>Submit</button>
             </div>
                 

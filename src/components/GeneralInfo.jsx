@@ -1,5 +1,4 @@
-
-function GeneralInfo({next, prev, isActive, generalInfo, change}) {
+function GeneralInfo({next, isActive, generalInfo, change}) {
 
   return (
     <>
@@ -17,7 +16,6 @@ function GeneralInfo({next, prev, isActive, generalInfo, change}) {
                     <input value={generalInfo.email} onChange={(e)=>change(()=>{return {...generalInfo, email: e.target.value} })} type="email" name="email" id="email" />
                 </div>
                 <div className="btn-div">
-                    <button className="btn" onClick={prev}>Prev</button>
                     <button className="btn" onClick={next}>Next</button>
                 </div>
             </section>
