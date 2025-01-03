@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/App.css'
 import GeneralInfo from './generalInfo'
+import Bio from './Bio'
 import Education from './Education'
 import Experience from './Experience'
 import Skills from './Skills'
@@ -12,6 +13,7 @@ function App() {
     {
         "title": "",
         "company": "",
+        "path": "",
         "start": "",
         "end": ""
     });
@@ -26,20 +28,26 @@ function App() {
     {
         "firstname": "",
         "lastname": "",
+        "path": "",
         "phone": "",
         "email": ""
     });
   const [skills, setSkills] = useState("");
-  const skillsArray = skills.split(" ");   
+  const [bio, setBio] = useState("");
 
-  console.log(skillsArray);
+  const skillsArray = skills.split(" ").map(el=>{ return {value:el, id:crypto.randomUUID()}}); 
 
-  function changeHandler(e){
+
+
+  function changeSkills(e){
     setSkills(e.target.value);
+  }
+  function changeBio(e){
+    setBio(e.target.value);
   }
 
   function clickNext() {
-    if(activeIndex < 3){
+    if(activeIndex < 5){
       setActiveIndex(activeIndex+1)
     }
   }
@@ -55,10 +63,11 @@ function App() {
   return (
     <div className="app">
       <GeneralInfo next={clickNext} isActive={activeIndex===0} generalInfo={generalInfo} change={(x)=>setGeneralInfo(x)} />
-      <Education next={clickNext} prev={clickPrev} isActive={activeIndex===1} education={education} change={(x)=>setEducation(x)}/>
-      <Skills isActive={activeIndex===2} next={clickNext} prev={clickPrev} value={skills} change={changeHandler}  />
-      <Experience submit={clickNext} prev={clickPrev} isActive={activeIndex===3} experience={experience} change={(x)=>setExperience(x)}/>
-      <Resume fullName={fullName} back={clickPrev} experience={experience} education={education} generalInfo={generalInfo} isActive={activeIndex===4} skills={skillsArray}  /> 
+      <Bio prev={clickPrev} next={clickNext} isActive={activeIndex===1} value={bio} change={changeBio}  />
+      <Education next={clickNext} prev={clickPrev} isActive={activeIndex===2} education={education} change={(x)=>setEducation(x)}/>
+      <Skills isActive={activeIndex===3} next={clickNext} prev={clickPrev} value={skills} change={changeSkills}  />
+      <Experience submit={clickNext} prev={clickPrev} isActive={activeIndex===4} experience={experience} change={(x)=>setExperience(x)}/>
+      <Resume fullName={fullName} back={clickPrev} experience={experience} education={education} generalInfo={generalInfo} isActive={activeIndex===5} skills={skillsArray} bio={bio} /> 
     </div>
   )
 }

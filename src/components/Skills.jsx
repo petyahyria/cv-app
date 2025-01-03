@@ -8,7 +8,7 @@ function Skills({prev, next, isActive, value, change}) {
                   <h1>Skills</h1>  
                   <div className="skills questions">
                     <label htmlFor={`skills`}>Skills</label>
-                    <input value={value} onChange={change} type="text" name={`skills`} id={`skills`} />
+                    <input placeholder="Write your skills separeted with space" value={value} onChange={change} type="text" name={`skills`} id={`skills`} />
                   </div>  
                   <div className="btn-div">
                     <button className="btn" onClick={prev}>Prev</button>

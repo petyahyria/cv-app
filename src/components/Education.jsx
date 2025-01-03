@@ -6,7 +6,7 @@ function Education({next, prev, isActive, education, change}) {
             (
             <section>
                 <h1>Education</h1>
-                <div className="education questions">
+                <div className="questions">
                     <label htmlFor="school-name">School name</label>
                     <input value={education.schoolName} onChange={(e)=>change(()=>{return {...education, schoolName:e.target.value} })} type="text" name="school-name" id="school-name" />
                     <label htmlFor="course">Course</label>

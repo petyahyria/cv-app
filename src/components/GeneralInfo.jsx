@@ -10,6 +10,8 @@ function GeneralInfo({next, isActive, generalInfo, change}) {
                     <input value={generalInfo.firstname} onChange={(e)=>change(()=>{return {...generalInfo, firstname: e.target.value} })} type="text" name="firstname" id="firstname" />
                     <label htmlFor="lastname">Lastname</label>
                     <input value={generalInfo.lastname} onChange={(e)=>change(()=>{return {...generalInfo, lastname: e.target.value} })} type="text" name="lastname" id="lastname" />
+                    <label htmlFor="path">Path</label>
+                    <input value={generalInfo.path} onChange={(e)=>change(()=>{return {...generalInfo, path:e.target.value} })}  type="text" name="path" id="path" />
                     <label htmlFor="phone">Phone</label>
                     <input value={generalInfo.phone} onChange={(e)=>change(()=>{return {...generalInfo, phone: e.target.value} })} type="tel" name="phone" id="phone" />
                     <label htmlFor="email">Email</label>

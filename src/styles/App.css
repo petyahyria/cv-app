@@ -28,7 +28,7 @@ section{
   box-shadow: 0 0 10px 1px #020617;
 }
 
-input, label{
+input, label, textarea{
   display: block;
   color: #020617;
 }
@@ -39,6 +39,16 @@ label{
 
 input{
   width: 100%;
+  padding: 5px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  background-color: #f1f5f9;
+  border: 1px solid #020617;
+}
+
+textarea{
+  width: 100%;
+  height: 300px;
   padding: 5px;
   font-size: 1.3rem;
   margin-bottom: 10px;
@@ -72,7 +82,91 @@ button{
 }
 
 .resume{
-  color:#f1f5f9;
+  color: #020617;
+  background-color: #f1f5f9;
+  height: 297mm;
+  width: 210mm;
+  margin: 10px auto;
+  display: flex;
+}
+
+.side{
+  width: 80mm;
+  height: 297mm;
+  background-color: #020617;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50mm 15mm 15mm 15mm;
+  text-align: left;
+}
+
+.side h2{
+  font-size: 2rem;
+}
+
+.side li{
+  font-size: 1.3rem;
+}
+
+.side  *{
+  width: 100%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20mm 0mm 15mm 0mm;
+  width: calc(210mm - 80mm);
+}
+
+.main h1 {
+  margin-left: 10mm;
+}
+
+.under{
+  text-decoration: underline #5eead4;
+  text-underline-offset: 5mm;
 }
 
 
+.main *{
+  width: 100%;
+}
+.path{
+  margin-top: 10mm;
+  color: #020617;
+  background-color: #5eead4;
+  align-self: self-start;
+  padding: 2mm 10mm;
+}
+
+.bio{
+  width: 130mm;
+  padding: 2mm 10mm;
+  box-shadow: 0 0 4px -2px #020617;
+}
+
+p{
+  word-break: break-all;
+  white-space: normal;
+}
+
+.experience{
+  padding: 2mm 0;
+  box-shadow: 0 0 4px -2px #020617;
+}
+
+.experience *, .education *{
+  margin-left: 10mm;
+}
+
+.exp-t{
+  font-size: 2.3rem;
+}
