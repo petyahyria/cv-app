@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import '../styles/App.css'
-import GeneralInfo from './generalInfo'
-import Bio from './Bio'
-import Education from './Education'
-import Experience from './Experience'
-import Skills from './Skills'
-import Resume from './Resume'
+import GeneralInfo from './GeneralInfo.jsx'
+import Bio from './Bio.jsx'
+import Education from './Education.jsx'
+import Experience from './Experience.jsx'
+import Skills from './Skills.jsx'
+import Resume from './Resume.jsx'
 
 function App() {
   const [activeIndex, setActiveIndex]=useState(0);
